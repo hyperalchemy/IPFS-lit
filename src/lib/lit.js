@@ -1,35 +1,17 @@
 import * as LitJsSdk from "lit-js-sdk";
 
 const client = new LitJsSdk.LitNodeClient()
-const chain = 'ethereum'
+const chain = 'mumbai'
 
-/** 
- * Access control for a wallet with > 0.00001 ETH
- * const accessControlConditionsETHBalance = [
-  {
-    contractAddress: '',
-    standardContractType: '',
-    chain,
-    method: 'eth_getBalance',
-    parameters: [
-      ':userAddress',
-      'latest'
-    ],
-    returnValueTest: {
-      comparator: '>=',
-      value: '10000000000000'
-    }
-  }
-]
- */
 
-// Must hold at least one Monster Suit NFT (https://opensea.io/collection/monster-suit)
+
+// Must hold IPFonts nft
 const accessControlConditionsNFT = [
     {
-      contractAddress: '0x89b597199dac806ceecfc091e56044d34e59985c',
+      contractAddress: '0x8ba1c5253b8aba807cf3a27b2b20ec4dd2ddd51d',
       standardContractType: 'ERC721',
       chain,
-      method: 'balanceOf',
+      method: 'safeMint',
       parameters: [
         ':userAddress'
       ],

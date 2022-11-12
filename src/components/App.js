@@ -4,9 +4,9 @@ import { create } from "ipfs-http-client";
 import lit from "../lib/lit";
 import Header from "./Header";
 
-const projectId = '';   // <---------- your Infura Project ID
+const projectId = 'NEXT_PUBLIC_INFURA_ID';   // <---------- your Infura Project ID
 
-const projectSecret = '';  // <---------- your Infura Secret
+const projectSecret = 'NEXT_PUBLIC_INFURA_SECRET';  // <---------- your Infura Secret
 // (for security concerns, consider saving these values in .env files)
 
 const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
